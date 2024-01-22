@@ -10,7 +10,7 @@ variable "my_instance_type" {
 
 variable "Key33_3" {
   type    = string
-  default = "ansible-key"
+  default = "Key33_3"
 }
 
 variable "os" {
