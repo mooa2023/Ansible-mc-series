@@ -8,7 +8,7 @@ variable "my_instance_type" {
   default = "t2.micro"
 }
 
-variable "Key33_3" {
+variable "my_key" {
   type    = string
   default = "Key33_3"
 }
