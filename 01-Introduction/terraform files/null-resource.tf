@@ -7,7 +7,7 @@ resource "null_resource" "vscode-config" {
     host        = aws_instance.ubuntu.public_ip
     user        = "ubuntu"
     password    = ""
-    private_key = file("~/Downloads/ansible-key.pem")
+    private_key = file("~/Downloads/Key33_3.pem")
   }
 
   provisioner "file" {
@@ -27,7 +27,7 @@ resource "null_resource" "vscode-config" {
     command = templatefile("${var.os}-ssh-script.tpl", {
       hostname     = aws_instance.ubuntu.public_ip
       user         = "ansible",
-      IdentityFile = "~/Downloads/ansible-key.pem"
+      IdentityFile = "~/Downloads/Key33_3.pem"
     })
     interpreter = var.os == "windows" ? ["powershell", "-Command"] : ["bash", "-c"]
   }
